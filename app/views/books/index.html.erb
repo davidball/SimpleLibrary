@@ -1,0 +1,91 @@
+<h1>Listing books</h1>
+
+<table>
+  <tr>
+    <th>Accession</th>
+    <th>Dewey</th>
+    <th>Cutter</th>
+    <th>Author last</th>
+    <th>Author first</th>
+    <th>Author middle</th>
+    <th>Title</th>
+    <th>Subtitle</th>
+    <th>Series name</th>
+    <th>Series number</th>
+    <th>Format</th>
+    <th>Isbn</th>
+    <th>Lccn</th>
+    <th>Publisher</th>
+    <th>Publisher place</th>
+    <th>Copyright</th>
+    <th>Illustrated</th>
+    <th>Illustration type</th>
+    <th>Pages</th>
+    <th>Contributor1</th>
+    <th>Contributor2</th>
+    <th>Contributor3</th>
+    <th>Subject1</th>
+    <th>Subject2</th>
+    <th>Subject3</th>
+    <th>Subject4</th>
+    <th>Subject5</th>
+    <th>Subject6</th>
+    <th>Subject7</th>
+    <th>Subject8</th>
+    <th>Description</th>
+    <th>Collection</th>
+    <th>Price</th>
+    <th>Source</th>
+    <th>Awards publicity</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @books.each do |book| %>
+  <tr>
+    <td><%= book.accession %></td>
+    <td><%= book.dewey %></td>
+    <td><%= book.cutter %></td>
+    <td><%= book.author_last %></td>
+    <td><%= book.author_first %></td>
+    <td><%= book.author_middle %></td>
+    <td><%= book.title %></td>
+    <td><%= book.subtitle %></td>
+    <td><%= book.series_name %></td>
+    <td><%= book.series_number %></td>
+    <td><%= book.format %></td>
+    <td><%= book.isbn %></td>
+    <td><%= book.lccn %></td>
+    <td><%= book.publisher %></td>
+    <td><%= book.publisher_place %></td>
+    <td><%= book.copyright %></td>
+    <td><%= book.illustrated %></td>
+    <td><%= book.illustration_type %></td>
+    <td><%= book.pages %></td>
+    <td><%= book.contributor1 %></td>
+    <td><%= book.contributor2 %></td>
+    <td><%= book.contributor3 %></td>
+    <td><%= book.subject1 %></td>
+    <td><%= book.subject2 %></td>
+    <td><%= book.subject3 %></td>
+    <td><%= book.subject4 %></td>
+    <td><%= book.subject5 %></td>
+    <td><%= book.subject6 %></td>
+    <td><%= book.subject7 %></td>
+    <td><%= book.subject8 %></td>
+    <td><%= book.description %></td>
+    <td><%= book.collection %></td>
+    <td><%= book.price %></td>
+    <td><%= book.source %></td>
+    <td><%= book.awards_publicity %></td>
+    <td><%= link_to 'Show', book %></td>
+    <td><%= link_to 'Edit', edit_book_path(book) %></td>
+    <td><%= link_to 'Destroy', book, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Book', new_book_path %>

@@ -1,0 +1,157 @@
+<%= form_for(@book) do |f| %>
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@book.errors.count, "error") %> prohibited this book from being saved:</h2>
+
+      <ul>
+      <% @book.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :accession %><br />
+    <%= f.text_field :accession %>
+  </div>
+  <div class="field">
+    <%= f.label :dewey %><br />
+    <%= f.text_field :dewey %>
+  </div>
+  <div class="field">
+    <%= f.label :cutter %><br />
+    <%= f.text_field :cutter %>
+  </div>
+  <div class="field">
+    <%= f.label :author_last %><br />
+    <%= f.text_field :author_last %>
+  </div>
+  <div class="field">
+    <%= f.label :author_first %><br />
+    <%= f.text_field :author_first %>
+  </div>
+  <div class="field">
+    <%= f.label :author_middle %><br />
+    <%= f.text_field :author_middle %>
+  </div>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :subtitle %><br />
+    <%= f.text_field :subtitle %>
+  </div>
+  <div class="field">
+    <%= f.label :series_name %><br />
+    <%= f.text_field :series_name %>
+  </div>
+  <div class="field">
+    <%= f.label :series_number %><br />
+    <%= f.text_field :series_number %>
+  </div>
+  <div class="field">
+    <%= f.label :format %><br />
+    <%= f.text_field :format %>
+  </div>
+  <div class="field">
+    <%= f.label :isbn %><br />
+    <%= f.text_field :isbn %>
+  </div>
+  <div class="field">
+    <%= f.label :lccn %><br />
+    <%= f.text_field :lccn %>
+  </div>
+  <div class="field">
+    <%= f.label :publisher %><br />
+    <%= f.text_field :publisher %>
+  </div>
+  <div class="field">
+    <%= f.label :publisher_place %><br />
+    <%= f.text_field :publisher_place %>
+  </div>
+  <div class="field">
+    <%= f.label :copyright %><br />
+    <%= f.text_field :copyright %>
+  </div>
+  <div class="field">
+    <%= f.label :illustrated %><br />
+    <%= f.text_field :illustrated %>
+  </div>
+  <div class="field">
+    <%= f.label :illustration_type %><br />
+    <%= f.text_field :illustration_type %>
+  </div>
+  <div class="field">
+    <%= f.label :pages %><br />
+    <%= f.text_field :pages %>
+  </div>
+  <div class="field">
+    <%= f.label :contributor1 %><br />
+    <%= f.text_field :contributor1 %>
+  </div>
+  <div class="field">
+    <%= f.label :contributor2 %><br />
+    <%= f.text_field :contributor2 %>
+  </div>
+  <div class="field">
+    <%= f.label :contributor3 %><br />
+    <%= f.text_field :contributor3 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject1 %><br />
+    <%= f.text_field :subject1 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject2 %><br />
+    <%= f.text_field :subject2 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject3 %><br />
+    <%= f.text_field :subject3 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject4 %><br />
+    <%= f.text_field :subject4 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject5 %><br />
+    <%= f.text_field :subject5 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject6 %><br />
+    <%= f.text_field :subject6 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject7 %><br />
+    <%= f.text_field :subject7 %>
+  </div>
+  <div class="field">
+    <%= f.label :subject8 %><br />
+    <%= f.text_field :subject8 %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :collection %><br />
+    <%= f.text_field :collection %>
+  </div>
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </div>
+  <div class="field">
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </div>
+  <div class="field">
+    <%= f.label :awards_publicity %><br />
+    <%= f.text_field :awards_publicity %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,17 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h1>Arbor Library Catalog</h1>
+
+<% @books.each do |book| %>
+  <div class="entry">
+    <h3>Title:&#32;<%= book.title %></h3>
+    <h3>Catalog:&#32;<%= book.dewey %>&#32;<%= book.cutter %></h3>
+    <h3>Author:&#32;<%= book.author_last %>&#44;&#32;<%= book.author_first %></h3>
+    <%= sanitize(book.description) %>
+    <div class="price_line">
+      <span class="price"><%= book.price %></span>
+    </div>
+  </div>
+<% end %>

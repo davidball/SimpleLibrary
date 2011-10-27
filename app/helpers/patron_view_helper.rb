@@ -1,0 +1,2 @@
+module PatronViewHelper
+end
